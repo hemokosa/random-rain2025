@@ -4,7 +4,7 @@ WIDTH = 80
 HEIGHT = 25
 
 # 1行目：固定
-header = 'v                                    vvvvvvvv' + ' ' * (WIDTH - 45)
+header = 'v' * 80
 lines = [header]
 
 # 2～22行目：ランダムに ? を配置
@@ -16,9 +16,9 @@ for _ in range(1, 22):
     lines.append(''.join(row))
 
 # 23〜25行目：固定文字列
-footer_23 = '                                     >>>>>>>>v' + ' ' * (WIDTH - 46)
-footer_24 = 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"Rain."<vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
-footer_25 = '????????????????????????????????????<>,#$:_@ >??????????????????????????????????'
+footer_23 = ' ' * 37 + '>>>>>>>>v' + ' ' * (WIDTH - 46)
+footer_24 = 'v' * 38 + '"Rain."<' + 'v' * (WIDTH - 46)
+footer_25 = '?' * 36 + '<>,#$:_@ >' + '?' * (WIDTH - 46)
 lines.append(footer_23)
 lines.append(footer_24)
 lines.append(footer_25)

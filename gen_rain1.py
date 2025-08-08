@@ -4,7 +4,7 @@ WIDTH = 80
 HEIGHT = 25
 
 # 1行目：固定
-header = 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'
+header = 'v' * 80
 lines = [header]
 
 # 2～22行目：ランダムに ? を配置
@@ -24,18 +24,18 @@ q_positions = random.sample(range(36), num_q)
 for pos in q_positions:
     row1[pos] = '?'
 
-row2 = [' '] * 34
+row2 = [' '] * 35
 num_q = random.randint(25, 34)
 q_positions = random.sample(range(34), num_q)
 for pos in q_positions:
     row2[pos] = '?'
 
-line = ''.join(row1) + '^^^^^^^^^ ' + ''.join(row2)
+line = ''.join(row1) + '^' * 9 + ''.join(row2)
 lines.append(line)
 
 # 24〜25行目：固定文字列
-footer_24 = '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^v"Rain."0<^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^'
-footer_25 = '                                    <,_@#:                                      '
+footer_24 = '^' * 36 + 'v"Rain."0<' + '^' * (WIDTH - 46)
+footer_25 = ' ' * 36 + '<,_@#:' + ' ' * (WIDTH - 42)
 lines.append(footer_24)
 lines.append(footer_25)
 
