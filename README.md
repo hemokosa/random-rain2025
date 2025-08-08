@@ -1,2 +1,2 @@
 # random-rain2025
-Befunge93 Radom Rain Poetry
+Befunge93 Random Rain Poetry
